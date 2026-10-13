@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dana Pan | Signal in the Noise</title>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --text: #2d2d2d;
+            --accent: #5c7c6e;
+            --border: #e8e8e8;
+            --muted: #6b6b6b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: var(--muted);
+        }
+
+        .thread {
+            background: #f2f4f3;
+            border-left: 3px solid var(--accent);
+            padding: 15px 20px;
+            margin: 30px 0;
+            font-size: 14px;
+        }
+
+        .thread p {
+            margin-bottom: 5px;
+        }
+
+        .thread p:last-child {
+            margin-bottom: 0;
+        }
+
+        .books {
+            margin: 40px 0;
+        }
+
+        .books h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .book {
+            display: flex;
+            gap: 15px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .book:last-child {
+            border-bottom: none;
+        }
+
+        .book-cover {
+            width: 60px;
+            height: 80px;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .book-info {
+            flex: 1;
+        }
+
+        .book-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .book-format {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .book-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--text);
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 3px;
+        }
+
+        .book-link:hover {
+            opacity: 0.85;
+        }
+
+        .author-store {
+            margin: 40px 0;
+            padding: 25px;
+            background: #f7f7f7;
+            border-radius: 4px;
+        }
+
+        .author-store h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .author-link {
+            display: block;
+            padding: 10px 0;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .author-link:hover {
+            text-decoration: underline;
+        }
+
+        .newsletter {
+            margin: 50px 0 30px;
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .newsletter h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .email-form input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .email-form button {
+            width: 100%;
+            padding: 12px;
+            background: var(--text);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .email-form button:hover {
+            opacity: 0.85;
+        }
+
+        .social {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .social h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-link {
+            padding: 10px 20px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 3px;
+        }
+
+        .social-link:hover {
+            border-color: var(--accent);
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dana Pan</h1>
+        <p class="tagline">writing minds called malfunction as instruments needing tuning, not repair</p>
+    </header>
+
+    <div class="thread">
+        <strong>The Thread:</strong>
+        <p>A neurodivergent author writing backstage guides for those who've spent years trying to fix themselves instead of finding their signal.</p>
+        <p>All text-only. No hustle. Just the work behind the scenes.</p>
+    </div>
+
+    <section class="books">
+        <h2>The Books</h2>
+
+        <div class="book">
+            <div class="book-cover">TF</div>
+            <div class="book-info">
+                <span class="book-title">The Tuning Fork Effect</span>
+                <p class="book-format">ASIN: B0GFVM12QS | Kindle | The field guide to finding your signal.</p>
+                <a href="https://www.amazon.com/dp/B0GFVM12QS" class="book-link" target="_blank">Read on Amazon</a>
+            </div>
+        </div>
+
+        <div class="book">
+            <div class="book-cover">NR</div>
+            <div class="book-info">
+                <span class="book-title">The Neuro-Renaissance: Find the Signal in the Noise</span>
+                <p class="book-format">Diagnosed at 9, rediscovered at 30. Kindle B0HMPWFB9R | Paperback B0HMQBW49D (UK)</p>
+                <a href="https://www.amazon.com/dp/B0HMPWFB9R" class="book-link" target="_blank">Read on Amazon</a>
+            </div>
+        </div>
+
+        <div class="book">
+            <div class="book-cover">F1</div>
+            <div class="book-info">
+                <span class="book-title">Filter: Off (Book 1)</span>
+                <p class="book-format">Neurodivergent dystopian fiction | Kindle & Paperback</p>
+                <a href="#" class="book-link" target="_blank">Coming soon</a>
+            </div>
+        </div>
+
+        <div class="book">
+            <div class="book-cover">F2</div>
+            <div class="book-info">
+                <span class="book-title">Filter: Off (Book 2)</span>
+                <p class="book-format">Neurodivergent dystopian fiction | Kindle & Paperback</p>
+                <a href="#" class="book-link" target="_blank">Coming soon</a>
+            </div>
+        </div>
+
+        <div class="book">
+            <div class="book-cover">F3</div>
+            <div class="book-info">
+                <span class="book-title">Filter: Off (Book 3)</span>
+                <p class="book-format">Neurodivergent dystopian fiction | Kindle & Paperback</p>
+                <a href="#" class="book-link" target="_blank">Coming soon</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="author-store">
+        <h2>Author Store</h2>
+        <p>Explore all five books across formats and regions.</p>
+        <br>
+        <a href="https://www.amazon.com/stores/Dana-Pan/author/B0DVPSVPFF?ref=ap_rdr" class="author-link" target="_blank">Amazon.com Store (US)</a>
+        <a href="https://www.amazon.co.uk/stores/Dana-Pan/author/B0DVPSVPFF?ref=ap_rdr&shoppingPortalEnabled=true" class="author-link" target="_blank">Amazon.co.uk Store (UK)</a>
+    </section>
+
+    <section class="newsletter">
+        <h2>Newsletter</h2>
+        <p>Sign up for updates on new releases, behind-the-scenes writing notes, and backstage insights.</p>
+        <form class="email-form" action="#" method="POST">
+            <input type="email" name="email" placeholder="your@email.com" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p style="font-size: 12px; margin-top: 10px; color: var(--muted);">No spam. Unsubscribe anytime.</p>
+    </section>
+
+    <div class="social">
+        <h2>Social</h2>
+        <div class="social-links">
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Twitter / X</a>
+            <a href="#" class="social-link">Instagram</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dana Pan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
